@@ -17,7 +17,8 @@ COMMAND LIST:
 TO USE:
         - Google Account
         - Modify the Authentication.xml file; in between the username tag, enter your gmail email;
-        and, enter your password for the gmail account in the password tag. 
+        and, enter your password for the gmail account in the password tag. For the Administrator field,
+        enter an gmail email account address you plan to primarily message and manage the account from. 
 
 TO RUN: 
         - Execute Robot.py
