@@ -13,7 +13,7 @@ There are many of times I wish to not login to my Linux box. This gtalk-bot is b
         - |dumpsockets| / returns the socket statistics.
         - |memorypages| / returns the active/inactive memory page information.
         - |processlist| / returns the process list tree.
-        
+        - |getip| / returns the isp ip address of the bot's host
 *TO USE:*
 
         - Google Account
