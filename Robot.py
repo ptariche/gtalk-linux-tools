@@ -57,34 +57,38 @@ class SampleBot(GtalkRobot):
         print user, "executed command: who"
         msg = os.popen("/usr/bin/who")
         self.replyMessage(user, msg.read())
-    def command_004_NMAP(self, user, message, args):
+    def command_005_NMAP(self, user, message, args):
         '''(nmap|scan\s+(.*)(?i))'''
         url =args[1]
         print user, "executed command: nmap"
         msg = os.popen("nmap -v -v -sS -O -P0 "+url)
         self.replyMessage(user, msg.read())
-    def command_005_Ping(self, user, message, args):
+    def command_006_Ping(self, user, message, args):
         '''(ping|isup\s+(.*)(?i))'''
         url =args[1]
         print user, "executed command: ping"
         msg = os.popen("ping -c 5 "+url)
         self.replyMessage(user, msg.read())
-    def command_006_DumpSockets(self, user, message, args):
+    def command_007_DumpSockets(self, user, message, args):
         '''(dumpsockets)'''
         print user, "executed command: dumpsockets"
         msg = os.popen("ss")
         self.replyMessage(user, msg.read())
-    def command_007_ProcessList(self, user, message, args):
+    def command_008_ProcessList(self, user, message, args):
         '''(processlist)'''
         print user, "executed command: process list tree"
         msg = os.popen("ps -ejH")
         self.replyMessage(user, msg.read())
-    def command_008_MemoryPageInformation(self, user, message, args):
+    def command_009_MemoryPageInformation(self, user, message, args):
         '''(memorypages)'''
         print user, "executed command: memory information"
         msg = os.popen("vmstat -a")
         self.replyMessage(user, msg.read())
-
+    def command_010_getIP(self, user, message, args):
+        '''(getip)'''
+        print user, "executed command: get ip"
+        msg = os.popen("curl ifconfig.me/ip")
+        self.replyMessage(user, msg.read())
 ############################################################################################################################
 if __name__ == "__main__":
     GoogleSession = ElementTree.parse('authentication.xml')
